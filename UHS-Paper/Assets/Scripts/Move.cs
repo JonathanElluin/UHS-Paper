@@ -5,7 +5,7 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
 
-    public Vector3 wantedPositon;         //La position désirée
+    public Vector3 wantedPosition;         //La position désirée
     public bool useLerp = false;         //Si on utilise la fonction Lerp dans notre Update
     public float speed;            //La vitesse de déplacement si on utilise MoveToward
     public float damping = 1f;            //Le facteur du lerp
@@ -20,7 +20,7 @@ public class Move : MonoBehaviour
 
     void Start()
     {
-        wantedPositon = transform.position; //Pour que l'objet soit à sa place initiale dans la scene
+        wantedPosition = transform.position; //Pour que l'objet soit à sa place initiale dans la scene
         hasHitLeft = true;
     }
 
@@ -57,7 +57,7 @@ public class Move : MonoBehaviour
     public void MoveTo(Vector3 position, bool lerped = false)
     {
         useLerp = lerped;
-        wantedPositon = position;
+        wantedPosition = position;
     }
 }
 
