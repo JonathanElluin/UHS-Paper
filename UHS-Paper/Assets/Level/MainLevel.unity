@@ -291,6 +291,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 36.899002
       objectReference: {fileID: 0}
+    - target: {fileID: 65820338247890050, guid: 0b50edd1ab1ea9c4ba8edc42f1b15181,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b50edd1ab1ea9c4ba8edc42f1b15181, type: 2}
   m_IsPrefabParent: 0
@@ -707,6 +712,7 @@ GameObject:
   - component: {fileID: 822873596}
   - component: {fileID: 822873595}
   - component: {fileID: 822873594}
+  - component: {fileID: 822873598}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -780,6 +786,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 36.899002, z: 0}
+--- !u!114 &822873598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 822873593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c6527c4c8028e4ca134b3538625908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1237074575
 GameObject:
   m_ObjectHideFlags: 0
