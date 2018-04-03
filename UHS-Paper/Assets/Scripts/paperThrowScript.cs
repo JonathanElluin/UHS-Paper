@@ -23,8 +23,9 @@ public class PaperThrowScript : MonoBehaviour {
     // Use this for initialization
     void Start () {
         //direction = move.wantedPosition;
-        InitialPosition = this.transform.position;
+        InitialPosition = paper.transform.position;
         paper.useGravity = false;
+        Time.timeScale = 1;
     }
 	
 	// Update is called once per frame
@@ -46,16 +47,21 @@ public class PaperThrowScript : MonoBehaviour {
             direction = new Vector3(xAxisForce, yAxisForce*1.6f, -power);
             paper.useGravity = true;
             paper.velocity = direction;
-            
-            Destroy(gameObject, 5.0f);
-            ResetPosition();
         }
     }
     
+    private IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(5);
+        ResetPosition();
+    }
 
     private void ResetPosition()
     {
-        this.transform.position = InitialPosition + new Vector3(Random.Range(-20, 20), 0f, 0f);
+        this.transform.position = InitialPosition + new Vector3(Random.Range(-0.5f, 0.5f), 0f, 0f);
+        paper.rotation = new Quaternion(0f, 0f, 0f, 0f);
+        paper.velocity = new Vector3(0, 0, 0);
+
         paper.useGravity = false;
         canLaunch = true;
     }
@@ -65,6 +71,7 @@ public class PaperThrowScript : MonoBehaviour {
         if (col.gameObject.tag == "trashtrigger")
         {
             ScoreUpdate();
+            ResetPosition();
         }
     }
 
