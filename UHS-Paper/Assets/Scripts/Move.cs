@@ -13,8 +13,8 @@ public class Move : MonoBehaviour
                                           //damping = 1000 -> L'objet ira à la position instantanement
 
     private int direction;
-    private bool hasHitLeft;
-    private bool hasHitRight;
+    public bool hasHitLeft;
+    public bool hasHitRight;
     public Transform DummyRightPos;
     public Transform DummyLeftPos;
 
