@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PaperThrowScript : MonoBehaviour {
 
     public Rigidbody paper;
-    public Rigidbody target;
+    public Transform target;
     private Vector3 InitialPosition;
 
     private Vector3 direction;
