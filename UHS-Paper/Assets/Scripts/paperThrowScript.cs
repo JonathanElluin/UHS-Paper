@@ -5,10 +5,9 @@ using UnityEngine.UI;
 
 public class PaperThrowScript : MonoBehaviour {
 
-    public Rigidbody paper;
-    public Transform target;
+    public Move target;
+    public GameObject paperPrefab;
     private Vector3 InitialPosition;
-
     private Vector3 direction;
 
     public float power;
@@ -16,15 +15,24 @@ public class PaperThrowScript : MonoBehaviour {
     private float yAxisForce;
 
     public Text score;
-    private int paperScore = 0;
-
+    private int paperScore;
+    
     private bool canLaunch = true;
+
+    private void Awake()
+    {
+        this.GetComponent<Rigidbody>().useGravity = false;
+    }
 
     // Use this for initialization
     void Start () {
         //direction = move.wantedPosition;
-        InitialPosition = paper.transform.position;
-        paper.useGravity = false;
+        InitialPosition = paperPrefab.transform.position;
+        target = FindObjectOfType<Move>();
+        score = FindObjectOfType<Text>();
+        paperPrefab.GetComponent<Rigidbody>().collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
+        
+        paperPrefab.GetComponent<Rigidbody>().velocity = new Vector3();
         Time.timeScale = 1;
     }
 	
@@ -41,44 +49,34 @@ public class PaperThrowScript : MonoBehaviour {
         if (canLaunch == true)
         {
             canLaunch = false;
-            xAxisForce = target.position.x - paper.position.x;
-            yAxisForce = target.position.y - paper.position.y;
+            xAxisForce = target.transform.position.x - this.transform.position.x;
+            yAxisForce = target.transform.position.y - this.transform.position.y;
 
             direction = new Vector3(xAxisForce, yAxisForce*1.6f, -power);
-            paper.useGravity = true;
-            paper.velocity = direction;
+            this.GetComponent<Rigidbody>().useGravity = true;
+            this.GetComponent<Rigidbody>().velocity = direction;
+            Invoke("InstantiateNewBall",5f);
+            Destroy(gameObject, 5f);
+
         }
     }
-    
-    private IEnumerator Wait()
+
+    void InstantiateNewBall()
     {
-        yield return new WaitForSeconds(5);
-        ResetPosition();
+        Instantiate(paperPrefab, InitialPosition, new Quaternion());
     }
 
-    private void ResetPosition()
-    {
-        this.transform.position = InitialPosition + new Vector3(Random.Range(-0.5f, 0.5f), 0f, 0f);
-        paper.rotation = new Quaternion(0f, 0f, 0f, 0f);
-        paper.velocity = new Vector3(0, 0, 0);
-
-        paper.useGravity = false;
-        canLaunch = true;
-    }
-
-    private void OnTriggerEnter(Collider col)
+    private void OnTriggerEnter(Collider col)   //Panier
     {
         if (col.gameObject.tag == "trashtrigger")
         {
-            ScoreUpdate();
-            ResetPosition();
+            paperScore++;
+            score.text = "Nombre de panier: " + paperScore.ToString();
+            Debug.Log(paperScore);
+            Debug.Log(score.text);
+            Destroy(this.gameObject, 2f);
+            InstantiateNewBall();
         }
-    }
-
-    private void ScoreUpdate()
-    {
-        paperScore++;
-        score.text = "Nombre de panier: " + paperScore.ToString();
     }
 }
 
