@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 135035495137171352}
   m_Layer: 0
   m_Name: paperprefab
-  m_TagString: Untagged
+  m_TagString: paperTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,7 +114,6 @@ MonoBehaviour:
   target: {fileID: 0}
   paperPrefab: {fileID: 1936336073223100}
   power: 6.7
-  score: {fileID: 114612503165522528, guid: 0947ca42e0510d647b8605ab8a4b3a88, type: 2}
 --- !u!135 &135035495137171352
 SphereCollider:
   m_ObjectHideFlags: 1

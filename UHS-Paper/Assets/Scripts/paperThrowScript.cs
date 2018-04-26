@@ -13,9 +13,6 @@ public class PaperThrowScript : MonoBehaviour {
     public float power;
     private float xAxisForce;
     private float yAxisForce;
-
-    public Text score;
-    private int paperScore;
     
     private bool canLaunch = true;
 
@@ -27,12 +24,11 @@ public class PaperThrowScript : MonoBehaviour {
     // Use this for initialization
     void Start () {
         //direction = move.wantedPosition;
-        InitialPosition = paperPrefab.transform.position;
-        target = FindObjectOfType<Move>();
-        score = FindObjectOfType<Text>();
-        paperPrefab.GetComponent<Rigidbody>().collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
+        this.InitialPosition = paperPrefab.transform.position;
+        this.target = FindObjectOfType<Move>();
+        this.paperPrefab.GetComponent<Rigidbody>().collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
         
-        paperPrefab.GetComponent<Rigidbody>().velocity = new Vector3();
+        this.paperPrefab.GetComponent<Rigidbody>().velocity = new Vector3();
         Time.timeScale = 1;
     }
 	
@@ -55,27 +51,21 @@ public class PaperThrowScript : MonoBehaviour {
             direction = new Vector3(xAxisForce, yAxisForce*1.6f, -power);
             this.GetComponent<Rigidbody>().useGravity = true;
             this.GetComponent<Rigidbody>().velocity = direction;
-            Invoke("InstantiateNewBall",5f);
-            Destroy(gameObject, 5f);
-
+            Invoke("InstantiateNewBall",3f);
         }
     }
 
     void InstantiateNewBall()
     {
-        Instantiate(paperPrefab, InitialPosition, new Quaternion());
+        Instantiate(this.paperPrefab, InitialPosition, new Quaternion());
+        Destroy(gameObject);
     }
 
-    private void OnTriggerEnter(Collider col)   //Panier
+    private void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "trashtrigger")
+        if (col.CompareTag("trashtrigger"))
         {
-            paperScore++;
-            score.text = "Nombre de panier: " + paperScore.ToString();
-            Debug.Log(paperScore);
-            Debug.Log(score.text);
-            Destroy(this.gameObject, 2f);
-            InstantiateNewBall();
+            Invoke("InstantiateNewBall", 0f);
         }
     }
 }

@@ -1,0 +1,213 @@
+fileFormatVersion: 2
+guid: 021907a737ff2ac4e83098a3fb360a90
+timeCreated: 1524732717
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Box002
+    100002: Cylinder001
+    100004: Rectangle001
+    100006: Rectangle002
+    100008: Rectangle003
+    100010: Rectangle004
+    100012: Rectangle005
+    100014: Rectangle006
+    100016: Rectangle007
+    100018: Rectangle008
+    100020: Rectangle009
+    100022: Rectangle010
+    100024: Rectangle011
+    100026: Rectangle012
+    100028: Rectangle013
+    100030: Rectangle014
+    100032: Rectangle015
+    100034: Rectangle016
+    100036: Sphere001
+    100038: "\xE9tag\xE8re"
+    100040: //RootNode
+    400000: Box002
+    400002: Cylinder001
+    400004: Rectangle001
+    400006: Rectangle002
+    400008: Rectangle003
+    400010: Rectangle004
+    400012: Rectangle005
+    400014: Rectangle006
+    400016: Rectangle007
+    400018: Rectangle008
+    400020: Rectangle009
+    400022: Rectangle010
+    400024: Rectangle011
+    400026: Rectangle012
+    400028: Rectangle013
+    400030: Rectangle014
+    400032: Rectangle015
+    400034: Rectangle016
+    400036: Sphere001
+    400038: "\xE9tag\xE8re"
+    400040: //RootNode
+    2100000: 'Material #2'
+    2100002: 'Material #8'
+    2100004: No Name
+    2100006: 'Material #7'
+    2100008: 'Material #6'
+    2100010: 'Material #5'
+    2100012: 'Material #4'
+    2300000: Cylinder001
+    2300002: Rectangle001
+    2300004: Rectangle002
+    2300006: Rectangle003
+    2300008: Rectangle004
+    2300010: Rectangle005
+    2300012: Rectangle006
+    2300014: Rectangle007
+    2300016: Rectangle008
+    2300018: Rectangle009
+    2300020: Rectangle010
+    2300022: Rectangle011
+    2300024: Rectangle012
+    2300026: Rectangle013
+    2300028: Rectangle014
+    2300030: Rectangle015
+    2300032: Rectangle016
+    2300034: Sphere001
+    2300036: "\xE9tag\xE8re"
+    3300000: Cylinder001
+    3300002: Rectangle001
+    3300004: Rectangle002
+    3300006: Rectangle003
+    3300008: Rectangle004
+    3300010: Rectangle005
+    3300012: Rectangle006
+    3300014: Rectangle007
+    3300016: Rectangle008
+    3300018: Rectangle009
+    3300020: Rectangle010
+    3300022: Rectangle011
+    3300024: Rectangle012
+    3300026: Rectangle013
+    3300028: Rectangle014
+    3300030: Rectangle015
+    3300032: Rectangle016
+    3300034: Sphere001
+    3300036: "\xE9tag\xE8re"
+    4300000: "\xE9tag\xE8re"
+    4300002: Rectangle001
+    4300004: Rectangle002
+    4300006: Rectangle003
+    4300008: Rectangle004
+    4300010: Rectangle005
+    4300012: Rectangle006
+    4300014: Rectangle007
+    4300016: Rectangle008
+    4300018: Rectangle009
+    4300020: Rectangle010
+    4300022: Rectangle011
+    4300024: Rectangle012
+    4300026: Rectangle013
+    4300028: Rectangle014
+    4300030: Rectangle015
+    4300032: Rectangle016
+    4300034: Cylinder001
+    4300036: Sphere001
+    6400000: Cylinder001
+    6400002: Rectangle001
+    6400004: Rectangle002
+    6400006: Rectangle003
+    6400008: Rectangle004
+    6400010: Rectangle005
+    6400012: Rectangle006
+    6400014: Rectangle007
+    6400016: Rectangle008
+    6400018: Rectangle009
+    6400020: Rectangle010
+    6400022: Rectangle011
+    6400024: Rectangle012
+    6400026: Rectangle013
+    6400028: Rectangle014
+    6400030: Rectangle015
+    6400032: Rectangle016
+    6400034: Sphere001
+    6400036: "\xE9tag\xE8re"
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

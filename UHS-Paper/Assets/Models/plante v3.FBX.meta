@@ -303,6 +303,65 @@ ModelImporter:
     4300112: "Sph\xE8re026"
     4300114: "Sph\xE8re027"
     4300116: "Sph\xE8re028"
+    6400000: Cylindre001
+    6400002: Cylindre002
+    6400004: Cylindre003
+    6400006: Cylindre010
+    6400008: Cylindre011
+    6400010: Cylindre012
+    6400012: Cylindre013
+    6400014: Cylindre014
+    6400016: Cylindre015
+    6400018: Cylindre016
+    6400020: Cylindre017
+    6400022: Cylindre018
+    6400024: "C\xF4ne002"
+    6400026: Plan001
+    6400028: Plan002
+    6400030: Plan003
+    6400032: Plan004
+    6400034: Plan005
+    6400036: Plan007
+    6400038: Plan008
+    6400040: Plan012
+    6400042: Plan013
+    6400044: Plan014
+    6400046: Plan015
+    6400048: Plan016
+    6400050: "Sph\xE8re001"
+    6400052: "Sph\xE8re002"
+    6400054: "Sph\xE8re003"
+    6400056: "Sph\xE8re004"
+    6400058: "Sph\xE8re005"
+    6400060: "Sph\xE8re006"
+    6400062: "Sph\xE8re007"
+    6400064: "Sph\xE8re008"
+    6400066: "Sph\xE8re009"
+    6400068: "Sph\xE8re010"
+    6400070: "Sph\xE8re011"
+    6400072: "Sph\xE8re012"
+    6400074: "Sph\xE8re013"
+    6400076: "Sph\xE8re014"
+    6400078: "Sph\xE8re015"
+    6400080: "Sph\xE8re016"
+    6400082: "Sph\xE8re017"
+    6400084: "Sph\xE8re018"
+    6400086: "Sph\xE8re019"
+    6400088: "Sph\xE8re020"
+    6400090: "Sph\xE8re021"
+    6400092: "Sph\xE8re022"
+    6400094: "Sph\xE8re023"
+    6400096: "Sph\xE8re024"
+    6400098: "Sph\xE8re025"
+    6400100: "Sph\xE8re026"
+    6400102: "Sph\xE8re027"
+    6400104: "Sph\xE8re028"
+    6400106: Tube001
+    6400108: Tube002
+    6400110: Tube003
+    6400112: Tube004
+    6400114: Tube005
+    6400116: Tube006
     9500000: //RootNode
   externalObjects: {}
   materials:
@@ -336,11 +395,11 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
-    importVisibility: 1
+    addColliders: 1
+    importVisibility: 0
     importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
