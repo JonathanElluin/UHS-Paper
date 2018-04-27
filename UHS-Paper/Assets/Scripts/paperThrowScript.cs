@@ -57,8 +57,9 @@ public class PaperThrowScript : MonoBehaviour {
 
     void InstantiateNewBall()
     {
+        CancelInvoke();
         Instantiate(this.paperPrefab, InitialPosition, new Quaternion());
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 
     private void OnTriggerEnter(Collider col)
