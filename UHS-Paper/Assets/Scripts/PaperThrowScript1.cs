@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class paperThrowScript : MonoBehaviour {
+public class PaperThrowScript1 : MonoBehaviour {
 
     public Move target;
     public GameObject paperPrefab;
@@ -13,7 +12,7 @@ public class paperThrowScript : MonoBehaviour {
     public float power;
     private float xAxisForce;
     private float yAxisForce;
-    
+
     private bool canLaunch = true;
 
     private void Awake()
@@ -22,18 +21,20 @@ public class paperThrowScript : MonoBehaviour {
     }
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         //direction = move.wantedPosition;
         this.InitialPosition = paperPrefab.transform.position;
         this.target = FindObjectOfType<Move>();
         this.paperPrefab.GetComponent<Rigidbody>().collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
-        
+
         this.paperPrefab.GetComponent<Rigidbody>().velocity = new Vector3();
         Time.timeScale = 1;
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         if (Input.GetKey("space"))
         {
             OnKeydown();
@@ -48,10 +49,10 @@ public class paperThrowScript : MonoBehaviour {
             xAxisForce = target.transform.position.x - this.transform.position.x;
             yAxisForce = target.transform.position.y - this.transform.position.y;
 
-            direction = new Vector3(xAxisForce, yAxisForce*1.6f, -power);
+            direction = new Vector3(xAxisForce, yAxisForce * 1.6f, -power);
             this.GetComponent<Rigidbody>().useGravity = true;
             this.GetComponent<Rigidbody>().velocity = direction;
-            Invoke("InstantiateNewBall",3f);
+            Invoke("InstantiateNewBall", 3f);
         }
     }
 
@@ -70,5 +71,3 @@ public class paperThrowScript : MonoBehaviour {
         }
     }
 }
-
-
